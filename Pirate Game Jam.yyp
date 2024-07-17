@@ -30,11 +30,15 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.6.1.160",
   },
   "name":"Pirate Game Jam",
   "resources":[
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oShadowPlayer","path":"objects/oShadowPlayer/oShadowPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sShadowPlayer","path":"sprites/sShadowPlayer/sShadowPlayer.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
