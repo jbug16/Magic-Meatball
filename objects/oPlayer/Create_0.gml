@@ -1,6 +1,6 @@
 //~~ MOVEMENT ~~//
 
-
+// comment
 _x = x
 _y = y
 spd = 1.4;
