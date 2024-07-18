@@ -7,34 +7,16 @@ var _up = keyboard_check(ord("W"));
 var _down = keyboard_check(ord("S"));
 
 // Determine direction
-var xspd = (_right - _left);
-var yspd = (_down - _up);
-
-switch (sign(xspd)) {
-	case 1:
-		facing = 1;
-	break;
-	case -1:
-		facing = 3;
-	break;
-	/*default:
-		switch(sign(yspd)) {
-			case 1:
-				facing = 0
-			break;
-			case -1:
-				facing = 2
-			break;
-		}*/
-}
+var _x = (_right - _left);
+var _y = (_down - _up);
 
 // Diagonal movement calculations
-if (xspd != 0 and yspd != 0) {
-	xspd = xspd * spd * 0.707;
-	yspd = yspd * spd * 0.707;
+if (_x != 0 and _y != 0) {
+	xspd = _x * spd * 0.707;
+	yspd = _y * spd * 0.707;
 } else {
-	xspd = xspd * spd;
-	yspd = yspd * spd;
+	xspd = _x * spd;
+	yspd = _y * spd;
 }
 
 // Collisions
@@ -54,8 +36,5 @@ if (place_meeting(x, y + yspd, oWall)) {
 }*/
 
 // Apply movement
-_x += xspd;
-_y += yspd;
-
-x = floor(_x)
-y = floor(_y)
+x += xspd;
+y += yspd;
