@@ -1,26 +1,39 @@
-var _dt = delta_time / 1000000
-show_debug_message(_dt)
+//~~ MOVEMENT ~~//
 
-var _input = playerInput()
+// Controls
+var _left = keyboard_check(ord("A"));
+var _right = keyboard_check(ord("D"));
+var _up = keyboard_check(ord("W"));
+var _down = keyboard_check(ord("S"));
 
-if (_input.up) {
-	dy -= acc*_dt
+// Determine direction
+var _x = (_right - _left);
+var _y = (_down - _up);
+
+// Diagonal movement calculations
+if (_x != 0 and _y != 0) {
+	xspd = _x * spd * 0.707;
+	yspd = _y * spd * 0.707;
+} else {
+	xspd = _x * spd;
+	yspd = _y * spd;
 }
-if (_input.down) {
-	dy += acc*_dt
-}
-if (_input.left) {
-	dx -= acc*_dt
-}
-if (_input.right) {
-	dx += acc*_dt
+
+// Collisions
+if (place_meeting(x + xspd, y, oWall)) {
+	while (!place_meeting(x + sign(xspd), y, oWall)) {
+		x += sign(xspd);
+	}
+	xspd = 0;
 }
 
-dx *= fric
-dy *= fric
+if (place_meeting(x, y + yspd, oWall)) {
+	while (!place_meeting(x, y + sign(yspd), oWall)) {
+		y += sign(yspd);
+	}
+	yspd = 0;
+}
 
-sx += dx
-sy += dy
-
-x = floor(sx)
-y = floor(sy)
+// Apply movement
+x += xspd;
+y += yspd;
