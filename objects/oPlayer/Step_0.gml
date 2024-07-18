@@ -10,6 +10,24 @@ var _down = keyboard_check(ord("S"));
 var _x = (_right - _left);
 var _y = (_down - _up);
 
+switch (sign(_x)) {
+	case 1:
+		facing = 1;
+	break;
+	case -1:
+		facing = 3;
+	break;
+	/*default:
+		switch(sign(_y)) {
+			case 1:
+				facing = 0
+			break;
+			case -1:
+				facing = 2
+			break;
+		}*/
+}
+
 // Diagonal movement calculations
 if (_x != 0 and _y != 0) {
 	xspd = _x * spd * 0.707;
