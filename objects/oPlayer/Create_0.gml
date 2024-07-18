@@ -1,6 +1,6 @@
 //~~ MOVEMENT ~~//
 
-spd = 5;
+spd = 1;
 xspd = 0;
 yspd = 0;
 
