@@ -38,19 +38,20 @@ if (xspd != 0 and yspd != 0) {
 }
 
 // Collisions
-if (place_meeting(x + xspd, y, oWall)) {
-	while (!place_meeting(x + sign(xspd), y, oWall)) {
+if (collisionCheck(x + xspd, y + yspd)) {
+	/*while (!place_meeting(x + sign(xspd), y, oWall)) {
 		x += sign(xspd);
-	}
+	}*/
 	xspd = 0;
+	yspd = 0
 }
-
+/*
 if (place_meeting(x, y + yspd, oWall)) {
 	while (!place_meeting(x, y + sign(yspd), oWall)) {
 		y += sign(yspd);
 	}
 	yspd = 0;
-}
+}*/
 
 // Apply movement
 _x += xspd;
