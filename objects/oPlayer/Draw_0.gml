@@ -1,1 +1,0 @@
-draw_sprite(sPlayer, facing, x, y)
