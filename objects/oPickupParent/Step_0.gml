@@ -14,5 +14,5 @@ if (is_being_carried)
 {
 	interaction_object.visible = false;
 	interaction_object.x = x;
-	interaction_object.y = y - 16;
+	interaction_object.y = y - 64;
 }
