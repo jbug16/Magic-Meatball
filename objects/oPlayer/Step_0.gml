@@ -12,11 +12,11 @@ var _y = (_down - _up);
 
 // Diagonal movement calculations
 if (_x != 0 and _y != 0) {
-	xspd = _x * spd * 0.707;
-	yspd = _y * spd * 0.707;
+	xspd = _x * hspd * 0.707;
+	yspd = _y * vspd * 0.707;
 } else {
-	xspd = _x * spd;
-	yspd = _y * spd;
+	xspd = _x * hspd;
+	yspd = _y * vspd;
 }
 
 // Collisions
