@@ -23,6 +23,13 @@ var _c = find_next_position_with_collision(x, y, _xspd, _yspd);
 var _nextx = _c[0];
 var _nexty = _c[1];
 
+if (tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx, _nexty) != 0) {
+	depth = tilemap_depth + 10
+}
+if (tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx, _nexty - sprite_height) != 0) {
+	depth = tilemap_depth - 10
+}
+
 x = _nextx;
 y = _nexty;
 
