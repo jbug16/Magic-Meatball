@@ -7,34 +7,22 @@ var _up = keyboard_check(ord("W"));
 var _down = keyboard_check(ord("S"));
 
 // Determine direction
-var _x = (_right - _left);
-var _y = (_down - _up);
+var _xspd = (_right - _left);
+var _yspd = (_down - _up);
 
 // Diagonal movement calculations
-if (_x != 0 and _y != 0) {
-	xspd = _x * spd * 0.707;
-	yspd = _y * spd * 0.707;
+if (_xspd != 0 and _yspd != 0) {
+	_xspd *= spd * 0.707;
+	_yspd *= spd * 0.707;
 } else {
-	xspd = _x * spd;
-	yspd = _y * spd;
+	_xspd *= spd;
+	_yspd *= spd;
 }
 
-// Collisions
-if (collisionCheck(x + xspd, y + yspd)) {
-	/*while (!place_meeting(x + sign(xspd), y, oWall)) {
-		x += sign(xspd);
-	}*/
-	xspd = 0;
-	yspd = 0
-}
-/*
-if (place_meeting(x, y + yspd, oWall)) {
-	while (!place_meeting(x, y + sign(yspd), oWall)) {
-		y += sign(yspd);
-	}
-	yspd = 0;
-}*/
+var _c = find_next_position_with_collision(x, y, _xspd, _yspd);
+var _nextx = _c[0];
+var _nexty = _c[1];
 
-// Apply movement
-x += xspd;
-y += yspd;
+x = _nextx;
+y = _nexty;
+
