@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-hspd = -hspd;
+vspd = -vspd;
