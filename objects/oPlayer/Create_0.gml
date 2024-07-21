@@ -1,6 +1,10 @@
-//~~ MOVEMENT ~~//
+// Movement
+vspd = 5;
+hspd = 5;
 
-spd = 5;
+// Pickup items
+item = noone;
+pickup_radius = 100;
 
 c_x = 0
 c_y = sprite_height*0.25; // y is up from the bottom of the sprite
