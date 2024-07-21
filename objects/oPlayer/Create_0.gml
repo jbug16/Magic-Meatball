@@ -1,6 +1,6 @@
 // Movement
-vspd = 7;
-hspd = 6;
+vspd = 5;
+hspd = 5;
 
 // Pickup items
 item = noone;
