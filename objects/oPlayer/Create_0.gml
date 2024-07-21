@@ -7,13 +7,12 @@ item = noone;
 pickup_radius = 100;
 
 c_x = 0
-c_y = sprite_height*0.3; // y is up from the bottom of the sprite
+c_y = sprite_height*0.8; // y is up from the bottom of the sprite
 c_w = sprite_width;
-//c_h = sprite_height/4; // height adds up from the y
 
 facing = 0;
 
-KITCHEN_TILEMAP_LAYER = layer_get_id("KITCHEN_TILEMAP")
+KITCHEN_TILEMAP_LAYER = layer_get_id("KITCHEN_TILEMAP");
 KITCHEN_TILEMAP = layer_tilemap_get_id(KITCHEN_TILEMAP_LAYER);
 tilemap_w = tilemap_get_tile_width(KITCHEN_TILEMAP);
 tilemap_h = 64;
@@ -44,9 +43,6 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 		}
 	}
 	
-	if vspd > 1 {
-	show_debug_message(string(bool(xleft))+", "+string(bool(yleft))+", "+string(bool(xright))+", "+string(bool(yright)))
-	}
 	return [_returnx, _returny]
 }
 
