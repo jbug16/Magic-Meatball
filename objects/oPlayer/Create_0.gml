@@ -35,7 +35,7 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 	if (topleft and topright) {
 		_returny = floor(_y / tilemap_h) * tilemap_h + c_h - 1 + c_y;
 	} else if (bottomleft and bottomright) {
-		_returny = floor(_y / tilemap_h + 1) * tilemap_h - 1 + c_y;
+		_returny = floor(_y / tilemap_h) * tilemap_h - 1 + c_y;
 	}
 	
 	return [_returnx, _returny]
