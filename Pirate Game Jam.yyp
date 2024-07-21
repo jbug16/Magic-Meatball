@@ -38,7 +38,6 @@
   "resources":[
     {"id":{"name":"oFoodItem","path":"objects/oFoodItem/oFoodItem.yy",},},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
-    {"id":{"name":"oInteraction","path":"objects/oInteraction/oInteraction.yy",},},
     {"id":{"name":"oPickupParent","path":"objects/oPickupParent/oPickupParent.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oPotionItem","path":"objects/oPotionItem/oPotionItem.yy",},},
