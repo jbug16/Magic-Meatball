@@ -12,7 +12,6 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Characters","folderPath":"folders/Objects/Characters.yy","name":"Characters","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -36,6 +35,11 @@
   },
   "name":"Pirate Game Jam",
   "resources":[
+    {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
+    {"id":{"name":"oButtonHelp","path":"objects/oButtonHelp/oButtonHelp.yy",},},
+    {"id":{"name":"oButtonPlay","path":"objects/oButtonPlay/oButtonPlay.yy",},},
+    {"id":{"name":"oButtonQuit","path":"objects/oButtonQuit/oButtonQuit.yy",},},
+    {"id":{"name":"oMenuButtonParent","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},},
     {"id":{"name":"oFoodItem","path":"objects/oFoodItem/oFoodItem.yy",},},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
     {"id":{"name":"oPickupParent","path":"objects/oPickupParent/oPickupParent.yy",},},
@@ -44,6 +48,8 @@
     {"id":{"name":"oShadowPlayer","path":"objects/oShadowPlayer/oShadowPlayer.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
+    {"id":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
+    {"id":{"name":"sMenuButton","path":"sprites/sMenuButton/sMenuButton.yy",},},
     {"id":{"name":"sFoodItem","path":"sprites/sFoodItem/sFoodItem.yy",},},
     {"id":{"name":"sInteraction","path":"sprites/sInteraction/sInteraction.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
@@ -56,6 +62,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
   ],
   "templateType":"game",
