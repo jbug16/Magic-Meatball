@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oShadowPlayer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oInteraction",
+  "eventList":[],
   "managed":true,
-  "name":"oShadowPlayer",
+  "name":"oInteraction",
   "overriddenProperties":[],
   "parent":{
-    "name":"Characters",
-    "path":"folders/Objects/Characters.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"oPlayer",
-    "path":"objects/oPlayer/oPlayer.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sShadowPlayer",
-    "path":"sprites/sShadowPlayer/sShadowPlayer.yy",
+    "name":"sInteraction",
+    "path":"sprites/sInteraction/sInteraction.yy",
   },
   "spriteMaskId":null,
   "visible":true,
