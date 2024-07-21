@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oShadowPlayer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oPickupParent",
+  "eventList":[],
   "managed":true,
-  "name":"oShadowPlayer",
+  "name":"oPickupParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Characters",
-    "path":"folders/Objects/Characters.yy",
+    "name":"Pickups",
+    "path":"folders/Objects/Pickups.yy",
   },
-  "parentObjectId":{
-    "name":"oPlayer",
-    "path":"objects/oPlayer/oPlayer.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sShadowPlayer",
-    "path":"sprites/sShadowPlayer/sShadowPlayer.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
