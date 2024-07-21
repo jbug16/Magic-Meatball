@@ -7,9 +7,9 @@ item = noone;
 pickup_radius = 100;
 
 c_x = 0
-c_y = sprite_height*0.25; // y is up from the bottom of the sprite
+c_y = sprite_height*0.3; // y is up from the bottom of the sprite
 c_w = sprite_width;
-c_h = sprite_height/4; // height adds up from the y
+//c_h = sprite_height/4; // height adds up from the y
 
 facing = 0;
 
@@ -23,25 +23,30 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 	var _nextx = _x + _xspd
 	var _nexty = _y + _yspd
 	
-	var bottomleft = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx - c_w/2, _nexty - c_y) == 1
-	var topleft = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx - c_w/2, _y - c_y - c_h) == 1
-	var bottomright = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx + c_w/2, _nexty - c_y) == 1
-	var topright = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx + c_w/2, _nexty - c_y - c_h) == 1
+	var xleft = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx - c_w/2, _y - c_y) == 1
+	var yleft = tilemap_get_at_pixel(KITCHEN_TILEMAP, _x - c_w/2, _nexty - c_y) == 1
+	var xright = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx + c_w/2, _y - c_y) == 1
+	var yright = tilemap_get_at_pixel(KITCHEN_TILEMAP, _x + c_w/2 - 1, _nexty - c_y) == 1
 	
 	var _returnx = _nextx
 	var _returny = _nexty
 	
-	if (bottomleft and topleft) {
+	if (xleft) {
 		_returnx = floor(_x / tilemap_w) * tilemap_w + c_w/2;
-	} else if (bottomright and topright) {
+	} else if (xright) {
 		_returnx = floor(_x / tilemap_w + 1) * tilemap_w - c_w/2;
 	}
-	if (topleft and topright) {
-		_returny = floor(_y / tilemap_h) * tilemap_h + c_h - 1 + c_y;
-	} else if (bottomleft and bottomright) {
-		_returny = floor(_y / tilemap_h) * tilemap_h - 1 + c_y;
+	if (yleft and yright) {
+		if (_yspd < 0) {
+			_returny = floor(_y / tilemap_h) * tilemap_h + 1 + c_y;
+		} else if (_yspd > 0) {
+			_returny = floor(_y / tilemap_h) * tilemap_h - 1 + c_y;
+		}
 	}
 	
+	if vspd > 1 {
+	show_debug_message(string(bool(xleft))+", "+string(bool(yleft))+", "+string(bool(xright))+", "+string(bool(yright)))
+	}
 	return [_returnx, _returny]
 }
 
