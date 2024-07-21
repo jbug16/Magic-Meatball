@@ -27,7 +27,7 @@
     "path":"texturegroups/Default",
   },
   "tileAnimation":{
-    "FrameData":[0,1,],
+    "FrameData":[0,1,2,],
     "SerialiseFrameCount":1,
   },
   "tileAnimationFrames":[],
@@ -38,5 +38,5 @@
   "tileWidth":80,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":2,
+  "tile_count":3,
 }
