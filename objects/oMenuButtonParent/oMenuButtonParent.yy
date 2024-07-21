@@ -9,8 +9,8 @@
   "name":"oMenuButtonParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Main Menu Buttons",
+    "path":"folders/Objects/Main Menu Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
