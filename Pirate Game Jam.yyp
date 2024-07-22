@@ -55,6 +55,7 @@
     {"id":{"name":"sInteraction","path":"sprites/sInteraction/sInteraction.yy",},},
     {"id":{"name":"sMenuButton","path":"sprites/sMenuButton/sMenuButton.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sPlayerBox","path":"sprites/sPlayerBox/sPlayerBox.yy",},},
     {"id":{"name":"sPotionItem","path":"sprites/sPotionItem/sPotionItem.yy",},},
     {"id":{"name":"sShadowPlayer","path":"sprites/sShadowPlayer/sShadowPlayer.yy",},},
     {"id":{"name":"sTileset","path":"sprites/sTileset/sTileset.yy",},},
