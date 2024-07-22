@@ -1,7 +1,7 @@
 // Interaction
 popup_radius = 100;
-interaction_object = instance_create_layer(x, y - 64, "InteractionButton", oInteraction);
-interaction_object.visible = false;
+interaction_object = sInteraction;
+interaction_object_visible = false;
 
 // Pickup
 target = noone;
