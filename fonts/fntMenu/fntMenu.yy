@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"fntMenu",
   "parent":{
-    "name":"Pirate Game Jam",
-    "path":"Pirate Game Jam.yyp",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

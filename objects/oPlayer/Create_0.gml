@@ -4,7 +4,6 @@ hspd = 5;
 
 // Pickup items
 item = noone;
-focusitem = noone;
 pickup_radius = 100;
 
 c_x = 0

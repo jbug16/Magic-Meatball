@@ -42,58 +42,47 @@ y = _nexty;
 
 #region Pickup Items
 
-var _pickupList = ds_list_create();
-var _pickupCount = collision_circle_list(x, y, pickup_radius, oPickupParent, false, true, _pickupList, true);
-
-if (_pickupCount > 0)
-{
-	// find the first item that isnt the one we are holding
-	for (var i = 0; i < _pickupCount; i++) 
-	{
-		if (_pickupList[| i] != item) 
-		{	
-			// set item as focus (meaning we draw the e above it and let the player pick it up)
-			focusitem = _pickupList[| i];
-			break;
-		}
-	}
-} 
-else 
-{
-	focusitem = noone
-}
-
 // Interaction key
 var _pickup = keyboard_check_pressed(ord("E"));
 
-if (_pickup) {
-	
-	var _previtem = item;
-	
-	// holding item?
-	if (item != noone)
-	{
-		item.x = x - sprite_width/4;
-		item.y = y;
-		// drop item
-		_previtem = item;
-		item = noone;
-	}
+if (_pickup)
+{
+	var _pickupList = ds_list_create();
+	var _pickupCount = collision_circle_list(x, y, pickup_radius, oPickupParent, false, true, _pickupList, true);
 	
 	if (_pickupCount > 0)
 	{
-		// find the first item that isnt the one we were just holding
-		item = focusitem;
-		focusitem = noone;
+		// first we need to know if we are already holding an item
+		if (item == noone) 
+		{
+			item = _pickupList[| 0];
+			
+			item.target = id;
+			item.is_being_carried = true;
+		}
+		else
+		{
+			// we are holding an item
+			for (var i = 0; i < _pickupCount; i++)
+			{
+				if (_pickupList[| i] != item)
+				{
+					// drop original item
+					item.target = noone;
+					item.is_being_carried = false;
+					
+					// pickup new item
+					item = _pickupList[| i];
+					item.target = id;
+					item.is_being_carried = true;
+					
+					break;
+				}
+			}
+		}
 	}
-}
-
-ds_list_destroy(_pickupList);
-
-if (item)
-{
-	item.x = x - sprite_width/4;
-	item.y = y - sprite_height - item.sprite_height;
+	
+	ds_list_destroy(_pickupList);
 }
 
 #endregion
