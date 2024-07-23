@@ -38,3 +38,39 @@ x = _nextx;
 y = _nexty;
 
 #endregion
+
+#region Pickup Item
+
+var _item_clicked = instance_position(mouse_x, mouse_y, oPickupParent);
+var _max_range = 128;
+
+// Check if player clicked on an object
+if (mouse_check_button_pressed(mb_left) and _item_clicked != noone) 
+{
+    // Calculate the distance between the player and the clicked object
+    var _distance_to_item = point_distance(x, y, _item_clicked.x, _item_clicked.y);
+
+    // Check if the distance is within the max range
+    if (_distance_to_item < _max_range) 
+	{
+        // Check if the player is not holding an object
+        if (holdingObject == noone) 
+		{
+            holdingObject = _item_clicked.id;
+        } 
+		else 
+		{
+            // Drop the currently held object
+            holdingObject = noone;
+            holdingObject = _item_clicked.id;
+        }
+    }
+}
+
+if (holdingObject != noone)
+{
+	holdingObject.x = x;
+	holdingObject.y = y;
+}
+
+#endregion

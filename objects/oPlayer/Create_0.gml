@@ -48,3 +48,5 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 	return [_returnx, _returny];
 }
 
+// Pickup
+holdingObject = noone;
