@@ -2,10 +2,7 @@
 vspd = 5;
 hspd = 5;
 
-// Pickup items
-item = noone;
-pickup_radius = 100;
-
+// Tile collisions
 c_x = 0
 c_y = sprite_height*0.4; // y is up from the bottom of the sprite
 c_w = sprite_width - 12;
