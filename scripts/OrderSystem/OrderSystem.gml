@@ -2,7 +2,7 @@ function randomOrder()
 {
 	// list of potential foods customer can order
 	foods_to_order = [
-		"beet soup",
+		"glazed donut",
 		"coffee",
 		"carrot cake",
 		"hot chocolate"
@@ -17,7 +17,13 @@ function randomOrder()
 	return _order;
 }
 
-function order(item) constructor 
+function order(item, id) constructor 
 {
 	self.item = item;
+	self.id = id;
+}
+
+function addOrderToArray()
+{
+	array_push(list_of_orders, customer_order);
 }

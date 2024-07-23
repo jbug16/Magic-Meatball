@@ -1,3 +1,6 @@
+pickup_radius = 64;
+can_pickup = false;
+
 // Interaction
 popup_radius = 100;
 interaction_object = sInteraction;
