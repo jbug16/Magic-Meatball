@@ -45,32 +45,37 @@ var _item_clicked = instance_position(mouse_x, mouse_y, oPickupParent);
 var _max_range = 128;
 
 // Check if player clicked on an object
-if (mouse_check_button_pressed(mb_left) and _item_clicked != noone) 
+if (mouse_check_button_pressed(mb_left)) 
 {
-    // Calculate the distance between the player and the clicked object
-    var _distance_to_item = point_distance(x, y, _item_clicked.x, _item_clicked.y);
-
-    // Check if the distance is within the max range
-    if (_distance_to_item < _max_range) 
+	if (_item_clicked != noone)
 	{
-        // Check if the player is not holding an object
-        if (holdingObject == noone) 
+	    // Calculate the distance between the player and the clicked object
+	    var _distance_to_item = point_distance(x, y, _item_clicked.x, _item_clicked.y);
+
+	    // Check if the distance is within the max range
+	    if (_distance_to_item < _max_range) 
 		{
-            holdingObject = _item_clicked.id;
-        } 
-		else 
-		{
-            // Drop the currently held object
-            holdingObject = noone;
-            holdingObject = _item_clicked.id;
-        }
-    }
+	        // Check if the player is not holding an object
+	        if (holdingObject == noone) 
+			{
+	            holdingObject = _item_clicked.id;
+	        } 
+			else 
+			{
+	            // Drop the currently held object
+	            holdingObject = noone;
+	            holdingObject = _item_clicked.id;
+	        }
+	    }
+	}
 }
+
+// TO DO: player can drop item by left clicking nothing
 
 if (holdingObject != noone)
 {
-	holdingObject.x = x;
-	holdingObject.y = y;
+	holdingObject.x = x - 8;
+	holdingObject.y = y - 128;
 }
 
 #endregion
