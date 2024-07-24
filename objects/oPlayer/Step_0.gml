@@ -38,3 +38,51 @@ x = _nextx;
 y = _nexty;
 
 #endregion
+
+#region Pickup Item
+
+var _item_near = instance_position(mouse_x, mouse_y, oPickupParent);
+var _max_range = 128;
+
+// Check if player is hovering over object
+if (_item_near != noone)
+{	
+	// Check if player clicked on an object
+	if (mouse_check_button_pressed(mb_left)) 
+	{
+		// Calculate the distance between the player and the clicked object
+		var _distance_to_item = point_distance(x, y, _item_near.x, _item_near.y);
+		
+		// Check if the distance is within the max range
+		if (_distance_to_item < _max_range) 
+		{
+		    // Check if the player is not holding an object
+		    if (holdingObject == noone) 
+			{
+		        holdingObject = _item_near.id;
+		    } 
+			else 
+			{
+		        // Drop the currently held object
+		        holdingObject = noone;
+		        holdingObject = _item_near.id;
+		    }
+		}
+	}
+}
+
+hoveredItem = _item_near;
+
+// Set coords for held item
+if (holdingObject != noone)
+{
+	holdingObject.x = x - 8;
+	holdingObject.y = y - 128;
+}
+
+
+
+// TO DO: player can drop item by left clicking nothing
+// TO DO: object is dropped at feet 
+
+#endregion
