@@ -39,50 +39,50 @@ y = _nexty;
 
 #endregion
 
+#region Pickup Item
 
-#region Pickup Items
+var _item_near = instance_position(mouse_x, mouse_y, oPickupParent);
+var _max_range = 128;
 
-// Interaction key
-var _pickup = keyboard_check_pressed(ord("E"));
-
-if (_pickup)
-{
-	var _pickupList = ds_list_create();
-	var _pickupCount = collision_circle_list(x, y, pickup_radius, oPickupParent, false, true, _pickupList, true);
-	
-	if (_pickupCount > 0)
+// Check if player is hovering over object
+if (_item_near != noone)
+{	
+	// Check if player clicked on an object
+	if (mouse_check_button_pressed(mb_left)) 
 	{
-		// first we need to know if we are already holding an item
-		if (item == noone) 
+		// Calculate the distance between the player and the clicked object
+		var _distance_to_item = point_distance(x, y, _item_near.x, _item_near.y);
+		
+		// Check if the distance is within the max range
+		if (_distance_to_item < _max_range) 
 		{
-			item = _pickupList[| 0];
-			
-			item.target = id;
-			item.is_being_carried = true;
-		}
-		else
-		{
-			// we are holding an item
-			for (var i = 0; i < _pickupCount; i++)
+		    // Check if the player is not holding an object
+		    if (holdingObject == noone) 
 			{
-				if (_pickupList[| i] != item)
-				{
-					// drop original item
-					item.target = noone;
-					item.is_being_carried = false;
-					
-					// pickup new item
-					item = _pickupList[| i];
-					item.target = id;
-					item.is_being_carried = true;
-					
-					break;
-				}
-			}
+		        holdingObject = _item_near.id;
+		    } 
+			else 
+			{
+		        // Drop the currently held object
+		        holdingObject = noone;
+		        holdingObject = _item_near.id;
+		    }
 		}
 	}
-	
-	ds_list_destroy(_pickupList);
 }
+
+hoveredItem = _item_near;
+
+// Set coords for held item
+if (holdingObject != noone)
+{
+	holdingObject.x = x - 8;
+	holdingObject.y = y - 128;
+}
+
+
+
+// TO DO: player can drop item by left clicking nothing
+// TO DO: object is dropped at feet 
 
 #endregion

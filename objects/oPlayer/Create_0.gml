@@ -2,16 +2,18 @@
 vspd = 5;
 hspd = 5;
 
-// Pickup items
-item = noone;
-pickup_radius = 100;
+// Animations
+facing_right = true;
 
+// Pickup
+holdingObject = noone;
+hoveredItem = noone;
+
+// Tile collisions
 c_x = 0
 c_y = sprite_height*0.4; // y is up from the bottom of the sprite
 c_w = sprite_width - 12;
 c_h = 24;
-
-facing_right = true;
 
 KITCHEN_TILEMAP_LAYER = layer_get_id("KITCHEN_TILEMAP");
 KITCHEN_TILEMAP = layer_tilemap_get_id(KITCHEN_TILEMAP_LAYER);
@@ -50,4 +52,3 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 	
 	return [_returnx, _returny];
 }
-
