@@ -71,7 +71,9 @@ if (mouse_check_button_pressed(mb_left))
 }
 
 // TO DO: player can drop item by left clicking nothing
+// TO DO: object is dropped at feet 
 
+// Set coords for held item
 if (holdingObject != noone)
 {
 	holdingObject.x = x - 8;
