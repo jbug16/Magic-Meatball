@@ -1,4 +1,6 @@
 if (customer_order != noone)
 {
-	draw_sprite(sFoodItem, 0, self.x - 16, self.y - 96);
+	var _sprite = sPotionItem;
+	if (customer_order.item == "coffee") _sprite = sFoodItem;
+	draw_sprite(_sprite, 0, self.x - 16, self.y - 96);
 }
