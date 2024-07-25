@@ -46,6 +46,7 @@
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
     {"id":{"name":"oGameOverUI","path":"objects/oGameOverUI/oGameOverUI.yy",},},
     {"id":{"name":"oLevelOne","path":"objects/oLevelOne/oLevelOne.yy",},},
+    {"id":{"name":"oLevelSelect","path":"objects/oLevelSelect/oLevelSelect.yy",},},
     {"id":{"name":"oLevelThree","path":"objects/oLevelThree/oLevelThree.yy",},},
     {"id":{"name":"oLevelTutorial","path":"objects/oLevelTutorial/oLevelTutorial.yy",},},
     {"id":{"name":"oLevelTwo","path":"objects/oLevelTwo/oLevelTwo.yy",},},
