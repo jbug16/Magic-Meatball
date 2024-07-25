@@ -65,6 +65,7 @@
     {"id":{"name":"sCustomer","path":"sprites/sCustomer/sCustomer.yy",},},
     {"id":{"name":"sFoodItem","path":"sprites/sFoodItem/sFoodItem.yy",},},
     {"id":{"name":"sInteraction","path":"sprites/sInteraction/sInteraction.yy",},},
+    {"id":{"name":"sItemShadow","path":"sprites/sItemShadow/sItemShadow.yy",},},
     {"id":{"name":"sMenuButton","path":"sprites/sMenuButton/sMenuButton.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPlayerBox","path":"sprites/sPlayerBox/sPlayerBox.yy",},},
