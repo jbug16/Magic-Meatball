@@ -49,42 +49,34 @@ var _max_range = 256;
 // Check if player clicked on an object
 if (mouse_check_button_pressed(mb_left)) 
 {
-	if (holdingObject == noone) {
+	// Check if the player is not holding an object
+	if (holdingObject == noone) 
+	{
 		// Check if player is hovering over object
-		if (_item_near != noone) {
+		if (_item_near != noone) 
+		{
 			// Calculate the distance between the player and the clicked object
 			var _distance_to_item = point_distance(x, y, _item_near.x, _item_near.y);
 		
 			// Check if the distance is within the max range
 			if (_distance_to_item < _max_range) 
 			{
-				// Check if the player is not holding an object
-				if (holdingObject == noone) 
-				{
-				    holdingObject = _item_near.id;
-				} 
-				else 
-				{
-				    // Drop the currently held object
-				    holdingObject = noone;
-				    holdingObject = _item_near.id;
-				}
+				holdingObject = _item_near.id;
 			}
 		}
-	} else {
+	} 
+	// if player is holding an object
+	else 
+	{
 		holdingObject.y = y;
 		holdingObject.z = 128;
 		
-		//var _distance = point_distance(holdingobject.x, holdingobject.y, mouse_x, mouse_y);
-		//var _direction = point_direction(holdingobject.x, holdingobject.y, mouse_x, mouse_y);
-		
-		holdingObject.dx = (mouse_x - holdingObject.x)/25
-		holdingObject.dy = (mouse_y - holdingObject.y)/25
+		holdingObject.dx = (mouse_x - holdingObject.x)/25;
+		holdingObject.dy = (mouse_y - holdingObject.y)/25;
 		
 		holdingObject = noone;
 	}
 }
-
 
 hoveredItem = _item_near;
 
@@ -97,11 +89,6 @@ if (holdingObject != noone and instance_exists(holdingObject))
 	holdingObject.dz = 0;
 }
 
-
-
-// TO DO: player can drop item by left clicking nothing
-// TO DO: object is dropped at feet 
-
 #endregion
 
 #region Complete Order
@@ -113,7 +100,7 @@ var _completion_range = 200;
 if (_customer_near != noone)
 {	
 	// Check if player clicked on a customer
-	if (mouse_check_button_pressed(mb_left)) 
+	if (mouse_check_button_pressed(mb_right)) 
 	{
 		// Calculate the distance between the player and customer
 		var _distance_to_item = point_distance(x, y, _customer_near.x, _customer_near.y);
