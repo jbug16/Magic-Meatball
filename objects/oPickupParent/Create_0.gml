@@ -4,9 +4,10 @@ dx = 0;
 dy = 0;
 dz = 0;
 
+oncounter = false;
 
 
-bounce = 0.5;
+bounce = 0.55;
 grav = 0.2;
 fric = 0.97;
 groundfric = 0.3;
@@ -26,7 +27,9 @@ tilemap_w = tilemap_get_tile_width(KITCHEN_TILEMAP);
 tilemap_h = 64
 tilemap_depth = layer_get_depth(KITCHEN_TILEMAP_LAYER);
 
-function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
+counter_height = 32;
+
+function collision(_x, _y, _xspd, _yspd) {
 	var _nextx = _x + _xspd;
 	var _nexty = _y + _yspd;
 	
@@ -42,7 +45,7 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 	var _returnx = _nextx;
 	var _returny = _y + _yspd; // NOT _nexty in case that gets changed by the above if statement
 	
-	if (xleft) {
+	/*if (xleft) {
 		_returnx = floor(_x / tilemap_w) * tilemap_w + c_w/2;
 	} else if (xright) {
 		_returnx = floor(_x / tilemap_w + 1) * tilemap_w - c_w/2;
@@ -53,30 +56,20 @@ function find_next_position_with_collision(_x, _y, _xspd, _yspd) {
 		} else if (_yspd > 0) {
 			_returny = floor(_y / tilemap_h) * tilemap_h + c_y - c_h;
 		}
+	}*/
+	
+	if (xleft) {
+		_returnx = _x
+	} else if (xright) {
+		_returnx = _x
+	}
+	if (yleft and yright) {
+		if (_yspd < 0) {
+			_returny = _y
+		} else if (_yspd > 0) {
+			_returny = _y
+		}
 	}
 	
-	return [_returnx, _returny];
-}
-
-
-
-function collision(_x, _y, _xspd, _yspd) {
-	var _nextx = _x + _xspd;
-	var _nexty = _y + _yspd;
-	
-	if (_yspd > 0) {
-		_nexty += c_h;
-	}
-	
-	var xleft = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx - c_w/2, _y - c_y) == 1;
-	var yleft = tilemap_get_at_pixel(KITCHEN_TILEMAP, _x - c_w/2, _nexty - c_y) == 1;
-	var xright = tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx + c_w/2, _y - c_y) == 1;
-	var yright = tilemap_get_at_pixel(KITCHEN_TILEMAP, _x + c_w/2 - 1, _nexty - c_y) == 1;
-	
-	
-	if xleft or yleft or xright or yright {
-	return true;
-	} else {
-		return false
-	}
+	return xleft or xright or yleft or yright;
 }

@@ -90,9 +90,10 @@ hoveredItem = _item_near;
 // Set coords for held item
 if (holdingObject != noone)
 {
-	holdingObject.x = x - 8;
-	holdingObject.y = y - 128;
-	holdingObject.z = 0;
+	holdingObject.x = x + 18;
+	holdingObject.y = y;
+	holdingObject.z = 96;
+	holdingObject.dz = 0;
 }
 
 
