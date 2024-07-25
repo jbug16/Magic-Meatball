@@ -1,3 +1,4 @@
+
 z = 500;
 
 dx = 0;
@@ -13,7 +14,7 @@ fric = 0.97;
 groundfric = 0.3;
 
 
-#region
+
 
 // Tile collisions
 c_x = 0;
@@ -73,3 +74,6 @@ function collision(_x, _y, _xspd, _yspd) {
 	
 	return xleft or xright or yleft or yright;
 }
+
+item = "coffee";
+

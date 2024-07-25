@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(rmLevelSelect); // this should go to the intro cutscene first
+room_goto(rmMain); // change to tutorial level
