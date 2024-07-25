@@ -30,6 +30,8 @@ function addOrderToArray()
 
 function isOrderCorrect(_customer)
 {
+	if (holdingObject == noone) return false;
+	
     // get this customer's order
     var _order = _customer.customer_order.item;
 	
