@@ -67,4 +67,5 @@ function completeOrder(_customer)
 	
 	// remove item from hand
 	instance_destroy(self.holdingObject);
+	self.holdingObject = noone;
 }
