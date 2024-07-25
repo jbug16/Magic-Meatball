@@ -74,7 +74,7 @@ if (_item_near != noone)
 hoveredItem = _item_near;
 
 // Set coords for held item
-if (holdingObject != noone)
+if (holdingObject != noone and instance_exists(holdingObject))
 {
 	holdingObject.x = x - 8;
 	holdingObject.y = y - 128;
@@ -104,7 +104,10 @@ if (_customer_near != noone)
 		// Check if the distance is within the max range
 		if (_distance_to_item < _completion_range) 
 		{
-		   completeOrder(_customer_near);
+			if (isOrderCorrect(_customer_near))
+			{
+				completeOrder(_customer_near);
+			}
 		}
 	}
 }
