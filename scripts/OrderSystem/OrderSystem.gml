@@ -72,3 +72,12 @@ function completeOrder(_customer)
 	instance_destroy(self.holdingObject);
 	self.holdingObject = noone;
 }
+
+function checkIfLastOrder()
+{
+	if (global.orders_completed == 2)
+	{
+		s("game end");
+		instance_create_depth(x, y, -999, oGameOverUI);
+	}
+}
