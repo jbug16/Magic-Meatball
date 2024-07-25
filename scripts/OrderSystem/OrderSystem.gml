@@ -65,6 +65,9 @@ function completeOrder(_customer)
 		}
 	}
 	
+	// add completed order to UI
+	global.orders_completed++;
+	
 	// remove item from hand
 	instance_destroy(self.holdingObject);
 	self.holdingObject = noone;
