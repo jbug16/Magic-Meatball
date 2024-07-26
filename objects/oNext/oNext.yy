@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oLevelSelect",
+  "%Name":"oNext",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oLevelSelect",
+  "name":"oNext",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oMenuButtonParent","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"propertyId":{"name":"Button_Text","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Level 3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oMenuButtonParent","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"propertyId":{"name":"Button_Text","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Next",},
   ],
   "parent":{
     "name":"Main Menu Buttons",

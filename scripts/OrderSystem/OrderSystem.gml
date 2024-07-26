@@ -2,10 +2,10 @@ function randomOrder()
 {
 	// list of potential foods customer can order
 	foods_to_order = [
-		"glazed donut",
-		"coffee",
-		"carrot cake",
-		"hot chocolate"
+		//"glazed donut",
+		"coffee"
+		//"carrot cake",
+		//"hot chocolate"
 	];
 	
 	// random index selected and rounded down

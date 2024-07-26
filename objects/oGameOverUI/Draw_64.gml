@@ -35,6 +35,6 @@ if (paused == true)
 		draw_text(_view_midw - 190, _view_midh - 170, "Time to Complete: " + string(global.time_to_complete));
 		draw_text(_view_midw - 190, _view_midh - 150, "BEST Time: " + string(global.best_time));
 		
-		instance_create_depth(_view_midw, _view_midh + 50, -9999, oLevelSelect);
+		instance_create_depth(_view_midw, _view_midh + 50, -9999, oNext);
     }
 }
