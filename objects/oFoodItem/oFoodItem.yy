@@ -36,6 +36,9 @@
     "name":"sFoodItem",
     "path":"sprites/sFoodItem/sFoodItem.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sPickupCollision",
+    "path":"sprites/sPickupCollision/sPickupCollision.yy",
+  },
   "visible":true,
 }

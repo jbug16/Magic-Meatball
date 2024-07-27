@@ -1,5 +1,7 @@
 #region Movement
 
+var _dt = delta_time / 100000;
+
 // Controls
 var _left = keyboard_check(ord("A"));
 var _right = keyboard_check(ord("D"));
@@ -7,8 +9,8 @@ var _up = keyboard_check(ord("W"));
 var _down = keyboard_check(ord("S"));
 
 // Determine direction
-var _xspd = (_right - _left);
-var _yspd = (_down - _up);
+var _xspd = (_right - _left)*_dt;
+var _yspd = (_down - _up)*_dt;
 
 if (_xspd != 0) {
 	facing_right = bool(sign(_xspd));

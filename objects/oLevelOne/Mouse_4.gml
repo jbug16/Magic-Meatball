@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(rmLevelOne);
+room_goto(rmCutsceneOne);

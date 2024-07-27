@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oPotionItem",
-  "eventList":[],
+  "%Name":"oCutscene1",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oPotionItem",
+  "name":"oCutscene1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Pickups",
-    "path":"folders/Objects/Pickups.yy",
+    "name":"Cutscenes",
+    "path":"folders/Objects/Cutscenes.yy",
   },
   "parentObjectId":{
-    "name":"oPickupParent",
-    "path":"objects/oPickupParent/oPickupParent.yy",
+    "name":"oCutscene",
+    "path":"objects/oCutscene/oCutscene.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,12 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPotionItem",
-    "path":"sprites/sPotionItem/sPotionItem.yy",
+    "name":"sCutscene1",
+    "path":"sprites/sCutscene1/sCutscene1.yy",
   },
-  "spriteMaskId":{
-    "name":"sPickupCollision",
-    "path":"sprites/sPickupCollision/sPickupCollision.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
