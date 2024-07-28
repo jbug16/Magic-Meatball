@@ -2,10 +2,10 @@ function randomOrder()
 {
 	// list of potential foods customer can order
 	foods_to_order = [
-		"glazed donut",
-		"coffee",
-		"carrot cake",
-		"hot chocolate"
+		//"glazed donut",
+		"coffee"
+		//"carrot cake",
+		//"hot chocolate"
 	];
 	
 	// random index selected and rounded down
@@ -65,7 +65,19 @@ function completeOrder(_customer)
 		}
 	}
 	
+	// add completed order to UI
+	global.orders_completed++;
+	
 	// remove item from hand
 	instance_destroy(self.holdingObject);
 	self.holdingObject = noone;
+}
+
+function checkIfLastOrder()
+{
+	if (global.orders_completed == 2)
+	{
+		s("game end");
+		instance_create_depth(x, y, -999, oGameOverUI);
+	}
 }

@@ -1,0 +1,1 @@
+global.current_timer = timer / 60;

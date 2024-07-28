@@ -13,3 +13,6 @@ for (var i = 0; i < array_length(list_of_orders); i++)
 	var _p = 20 * (i + 1);
 	draw_text(1400 + _padding, 30 + _p, list_of_orders[i].item);
 }
+
+// draw orders completed
+draw_text(1400, 300, "Orders Completed: \n" + string(global.orders_completed) + "/2");

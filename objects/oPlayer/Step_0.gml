@@ -113,6 +113,7 @@ if (_customer_near != noone)
 			if (isOrderCorrect(_customer_near))
 			{
 				completeOrder(_customer_near);
+				checkIfLastOrder();
 			}
 		}
 	}
