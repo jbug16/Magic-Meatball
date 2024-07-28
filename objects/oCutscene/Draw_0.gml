@@ -1,0 +1,1 @@
+draw_sprite(sprite_index, cutscene_frame, 0, 0)

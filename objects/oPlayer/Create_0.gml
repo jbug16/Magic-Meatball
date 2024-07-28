@@ -1,6 +1,6 @@
 // Movement
-vspd = 5;
-hspd = 5;
+vspd = 30;
+hspd = 30;
 
 // Animations
 facing_right = true;
