@@ -1,0 +1,1 @@
+if (room == rmCredits) room_goto(rmMenu);

@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oFoodItem",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oFoodItem",
   "overriddenProperties":[],
@@ -33,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFoodItem",
-    "path":"sprites/sFoodItem/sFoodItem.yy",
+    "name":"sCoffee",
+    "path":"sprites/sCoffee/sCoffee.yy",
   },
   "spriteMaskId":{
     "name":"sPickupCollision",

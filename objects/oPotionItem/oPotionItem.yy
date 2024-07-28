@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oPotionItem",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oPotionItem",
   "overriddenProperties":[],
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPotionItem",
-    "path":"sprites/sPotionItem/sPotionItem.yy",
+    "name":"sBluePotion",
+    "path":"sprites/sBluePotion/sBluePotion.yy",
   },
   "spriteMaskId":{
     "name":"sPickupCollision",

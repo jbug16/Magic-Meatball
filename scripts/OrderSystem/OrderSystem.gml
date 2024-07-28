@@ -1,18 +1,37 @@
-function randomOrder()
+function randomFoodOrder()
 {
 	// list of potential foods customer can order
 	foods_to_order = [
-		//"glazed donut",
-		"coffee"
-		//"carrot cake",
-		//"hot chocolate"
+		"coffee",
+		"pizza",
+		"pasta",
+		"salad"
 	];
 	
-	// random index selected and rounded down
+	// random index selected
 	var _random_index = irandom_range(0, array_length(foods_to_order) - 1);
 	
 	// find food of that index
 	var _order = foods_to_order[_random_index];
+	
+	return _order;
+}
+
+function randomPotionOrder()
+{
+	// list of potential foods customer can order
+	potions_to_order = [
+		"shell potion",
+		"slime potion",
+		"moss potion",
+		"dust potion"
+	];
+	
+	// random index selected
+	var _random_index = irandom_range(0, array_length(potions_to_order) - 1);
+	
+	// find food of that index
+	var _order = potions_to_order[_random_index];
 	
 	return _order;
 }
@@ -77,7 +96,6 @@ function checkIfLastOrder()
 {
 	if (global.orders_completed == 2)
 	{
-		s("game end");
 		instance_create_depth(x, y, -999, oGameOverUI);
 	}
 }

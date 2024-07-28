@@ -8,30 +8,27 @@ if z <= 0 {
 	dx *= groundfric;
 	dy *= groundfric;
 	
-} else if (z > counter_height and z+dz <= counter_height) {
-	dz = -dz*bounce;
-	z = counter_height;
-	
-	dx *= groundfric;
-	dy *= groundfric;
-	
 } else {
 	dx *= fric;
 	dy *= fric;
+}
+
+// Collisions
+if (place_meeting(x + dx, y, oWall)) 
+{
+	dx = -dx*bounce;
+}
+
+x += dx;
 	
+if (place_meeting(x, y + dy, oWall)) 
+{
+	dy = -dy*bounce;
 }
 
-if (x+dx < 0 or x+dx > 1344) {
-	dx = -dx*bounce
-}
-
-if (y+dx < 0 or y+dx > 768) {
-	dy = -dy*bounce
-}
-
-if (z+dz > counter_height) {
-	x += dx;
-	y += dy;
-}
+y += dy;
 
 z += dz;
+
+// Sprites
+sprite_index = item;
