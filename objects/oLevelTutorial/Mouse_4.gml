@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(rmMain); // change to tutorial level
+room_goto(rmTutorial); // change to tutorial level

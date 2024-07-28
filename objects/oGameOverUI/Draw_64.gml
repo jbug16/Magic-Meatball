@@ -32,8 +32,12 @@ if (paused == true)
 		draw_set_color(c_white);
 		
 		draw_text(_view_midw - 190, _view_midh - 190, "You completed all the orders!");
-		draw_text(_view_midw - 190, _view_midh - 170, "Time to Complete: " + string(global.time_to_complete));
-		draw_text(_view_midw - 190, _view_midh - 150, "BEST Time: " + string(global.best_time));
+		
+		var _current_time_string = seconds_to_timestamp(global.current_timer);
+		var _highscore_string = seconds_to_timestamp(global.room_highscores[$ room_get_name(room)].time);
+		
+		draw_text(_view_midw - 190, _view_midh - 170, "Time to Complete: " + _current_time_string);
+		draw_text(_view_midw - 190, _view_midh - 150, "BEST Time: " + _highscore_string);
 		
 		instance_create_depth(_view_midw, _view_midh + 50, -9999, oNext);
     }

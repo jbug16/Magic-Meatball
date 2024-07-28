@@ -1,1 +1,1 @@
-global.time_to_complete = seconds_to_timestamp(timer / 60); // gets seconds 
+global.current_timer = timer / 60;
