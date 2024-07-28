@@ -5,3 +5,6 @@
 event_inherited();
 
 vspd = -vspd;
+
+run = sShadowRun;
+idle = sShadowIdle;

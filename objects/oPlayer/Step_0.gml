@@ -1,7 +1,5 @@
 #region Movement
 
-var _dt = delta_time / 100000;
-
 // Controls
 var _left = keyboard_check(ord("A"));
 var _right = keyboard_check(ord("D"));
@@ -9,35 +7,67 @@ var _up = keyboard_check(ord("W"));
 var _down = keyboard_check(ord("S"));
 
 // Determine direction
-var _xspd = (_right - _left)*_dt;
-var _yspd = (_down - _up)*_dt;
-
-if (_xspd != 0) {
-	facing_right = bool(sign(_xspd));
-}
+xspd = (_right - _left);
+yspd = (_down - _up);
 
 // Diagonal movement calculations
-if (_xspd != 0 and _yspd != 0) {
-	_xspd *= vspd * 0.707;
-	_yspd *= hspd * 0.707;
+if (xspd != 0 and yspd != 0) {
+	xspd *= vspd * 0.707;
+	yspd *= hspd * 0.707;
 } else {
-	_xspd *= vspd;
-	_yspd *= hspd;
+	xspd *= vspd;
+	yspd *= hspd;
 }
 
-var _c = find_next_position_with_collision(x, y, _xspd, _yspd);
-var _nextx = _c[0];
-var _nexty = _c[1];
-
-if (tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx, _nexty) != 0) {
-	depth = tilemap_depth + 10
+// Collisions
+if (place_meeting(x + xspd, y, oWall)) 
+{
+	while (!place_meeting(x + sign(xspd), y, oWall)) 
+	{
+		x += sign(xspd);
+	}
+	
+	xspd = 0;
 }
-if (tilemap_get_at_pixel(KITCHEN_TILEMAP, _nextx, _nexty - sprite_height) != 0) {
-	depth = tilemap_depth - 10
+
+x += xspd;
+	
+if (place_meeting(x, y + yspd, oWall)) 
+{
+	while (!place_meeting(x, y + sign(yspd), oWall)) 
+	{
+		y += sign(yspd);
+	}
+	
+	yspd = 0;
 }
 
-x = _nextx;
-y = _nexty;
+y += yspd;
+
+#endregion
+
+#region Animations
+
+// Idle
+if (xspd == 0 and yspd == 0)
+{
+	sprite_index = idle;
+} 
+// Running
+else 
+{
+	// Check which way they're facing
+	if (xspd < 0)
+    {
+        xscale = -1;
+    }
+    else if (xspd > 0)
+    {
+        xscale = 1;
+    }
+	
+	sprite_index = run;
+}
 
 #endregion
 
@@ -85,8 +115,35 @@ hoveredItem = _item_near;
 // Set coords for held item
 if (holdingObject != noone and instance_exists(holdingObject))
 {
-	holdingObject.x = x + 18;
-	holdingObject.y = y;
+	// Change item positions for player
+	var _x_padding = 0;
+	var _y_padding = 0;
+	
+	switch (sprite_index)
+	{
+		case idle:
+			_x_padding = 0;
+			_y_padding = 0;
+		break;
+		
+		case run:
+		
+			_y_padding = 48;
+		
+			if (xscale == 1) // right
+			{
+				_x_padding = 24;
+			}
+			else // left
+			{
+				_x_padding = -24;
+			}
+		break;
+	}
+	
+	holdingObject.x = x + _x_padding;
+	holdingObject.y = y + _y_padding;
+	
 	holdingObject.z = 96;
 	holdingObject.dz = 0;
 }

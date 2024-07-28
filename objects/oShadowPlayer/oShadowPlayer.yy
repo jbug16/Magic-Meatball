@@ -33,9 +33,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sShadowPlayer",
-    "path":"sprites/sShadowPlayer/sShadowPlayer.yy",
+    "name":"sShadowIdle",
+    "path":"sprites/sShadowIdle/sShadowIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sPlayerCollision",
+    "path":"sprites/sPlayerCollision/sPlayerCollision.yy",
+  },
   "visible":true,
 }
