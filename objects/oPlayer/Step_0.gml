@@ -30,11 +30,31 @@ if (place_meeting(x + xspd, y, oWall))
 	xspd = 0;
 }
 
+if (place_meeting(x + xspd, y, oMirror)) 
+{
+	while (!place_meeting(x + sign(xspd), y, oMirror)) 
+	{
+		x += sign(xspd);
+	}
+	
+	xspd = 0;
+}
+
 x += xspd;
 	
 if (place_meeting(x, y + yspd, oWall)) 
 {
 	while (!place_meeting(x, y + sign(yspd), oWall)) 
+	{
+		y += sign(yspd);
+	}
+	
+	yspd = 0;
+}
+
+if (place_meeting(x, y + yspd, oMirror)) 
+{
+	while (!place_meeting(x, y + sign(yspd), oMirror)) 
 	{
 		y += sign(yspd);
 	}

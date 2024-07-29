@@ -26,19 +26,20 @@ if (paused == true)
 		var _box_size = 200;
 		var _col = c_gray;
 		
-		draw_rectangle_color(_view_midw - _box_size, _view_midh - _box_size, _view_midw + _box_size, _view_midh + _box_size, _col, _col, _col, _col, false);
+		//draw_rectangle_color(_view_midw - _box_size, _view_midh - _box_size, _view_midw + _box_size, _view_midh + _box_size, _col, _col, _col, _col, false
+		draw_sprite(sNotepad, 0, _view_midw, _view_midh);
 		
 		draw_set_font(fntUI);
-		draw_set_color(c_white);
-		
-		draw_text(_view_midw - 190, _view_midh - 190, "You completed all the orders!");
+		draw_set_color(c_black);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
 		
 		var _current_time_string = seconds_to_timestamp(global.current_timer);
 		var _highscore_string = seconds_to_timestamp(global.room_highscores[$ room_get_name(room)].time);
 		
-		draw_text(_view_midw - 190, _view_midh - 170, "Time to Complete: " + _current_time_string);
-		draw_text(_view_midw - 190, _view_midh - 150, "BEST Time: " + _highscore_string);
+		draw_text(_view_midw , _view_midh - 128, "Current Time: " + _current_time_string);
+		draw_text(_view_midw, _view_midh, "BEST Time: " + _highscore_string);
 		
-		instance_create_depth(_view_midw, _view_midh + 50, -9999, oNext);
+		instance_create_depth(_view_midw, _view_midh + 256, -9999, oNext);
     }
 }
