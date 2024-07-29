@@ -151,14 +151,14 @@ if (holdingObject != noone and instance_exists(holdingObject))
 #region Complete Order
 
 var _customer_near = instance_position(mouse_x, mouse_y, oCustomer);
-var _completion_range = 200;
+var _completion_range = 230;
 
 // Check if player is hovering over a customer
 if (_customer_near != noone)
 {	
 	// Check if player clicked on a customer
 	if (mouse_check_button_pressed(mb_right)) 
-	{
+	{	
 		// Calculate the distance between the player and customer
 		var _distance_to_item = point_distance(x, y, _customer_near.x, _customer_near.y);
 		

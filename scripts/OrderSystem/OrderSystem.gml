@@ -53,12 +53,48 @@ function isOrderCorrect(_customer)
 	
     // get this customer's order
     var _order = _customer.customer_order.item;
+	var _order_sprite = sWall;
+	
+	switch (_order)
+	{
+		case "pizza":
+			_order_sprite = sPizza;
+		break;
+		
+		case "salad":
+			_order_sprite = sSalad;
+		break;
+		
+		case "coffee":
+			_order_sprite = sCoffee;
+		break;
+		
+		case "pasta":
+			_order_sprite = sPasta;
+		break;
+		
+		case "shell potion":
+			_order_sprite = sBluePotion;
+		break;
+		
+		case "slime potion":
+			_order_sprite = sRedPotion;
+		break;
+		
+		case "moss potion":
+			_order_sprite = sGreenPotion;
+		break;
+		
+		case "dust potion":
+			_order_sprite = sPinkPotion;
+		break;
+	}
 	
 	// get item in player's hand
 	var _item_in_hand = self.holdingObject.item;
 	
 	// are these items the same?
-	return (_order == _item_in_hand);
+	return (_order_sprite == _item_in_hand);
 }
 
 function completeOrder(_customer)
