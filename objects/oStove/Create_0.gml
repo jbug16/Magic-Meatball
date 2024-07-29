@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-item_needed = sLettuce;
-recipe = sSalad;
+item_needed = sPastaBox;
+recipe = sPasta;

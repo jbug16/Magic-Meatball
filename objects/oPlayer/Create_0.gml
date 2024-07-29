@@ -12,3 +12,5 @@ xscale = 1;
 // Pickup
 holdingObject = noone;
 hoveredItem = noone;
+
+clicked_machine = noone;

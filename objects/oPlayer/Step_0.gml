@@ -178,37 +178,40 @@ if (_customer_near != noone)
 
 if (mouse_check_button_pressed(mb_right)) 
 {
-	if (collision_point(mouse_x, mouse_y, oFridge, true, false))
-	{
-		// if no item is available for pick up
-		if (oFridge.item_for_pickup == noone)
-		{
-			// if player is holding an item
-			if (holdingObject != noone)
-			{
-				// if player is holding correct item
-				if (holdingObject.sprite_index == oFridge.item_needed)
-				{
-					// remove item from hand
-					instance_destroy(holdingObject);
-					holdingObject = noone;
-		
-					// after 5 seconds
-					oFridge.alarm[0] = 100;
-				}
-			}
-		}
-		else
-		{
-			s("player is holding salad");
-			oFridge.item_for_pickup = noone;
-			oFridge.is_creating_recipe = false;
-	
-			holdingObject = noone;
-	
-			var inst = instance_create_layer(x, y, "Items", oFoodRecipe);
-			inst.sprite_index = oFridge.recipe;
-			holdingObject = inst;
-		}
-	}
+    // Check if mouse is over any instance of oMachineParent or its children
+    clicked_machine = instance_position(mouse_x, mouse_y, oMachineParent);
+
+    if (clicked_machine != noone)
+    {
+        // if no item is available for pick up
+        if (clicked_machine.item_for_pickup == noone)
+        {
+            // if player is holding an item
+            if (holdingObject != noone)
+            {
+                // if player is holding correct item
+                if (holdingObject.sprite_index == clicked_machine.item_needed)
+                {
+                    // remove item from hand
+                    instance_destroy(holdingObject);
+                    holdingObject = noone;
+            
+                    // after 5 seconds
+                    clicked_machine.alarm[0] = 100;
+                }
+            }
+        }
+        else
+        {
+            show_debug_message("player is holding salad");
+            clicked_machine.item_for_pickup = noone;
+            clicked_machine.is_creating_recipe = false;
+        
+            holdingObject = noone;
+        
+            var inst = instance_create_layer(mouse_x, mouse_y, "Items", oFoodRecipe);
+            inst.sprite_index = clicked_machine.recipe;
+            holdingObject = inst;
+        }
+    }
 }
