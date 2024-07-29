@@ -12,8 +12,8 @@
     "path":"folders/Objects/Machines.yy",
   },
   "parentObjectId":{
-    "name":"oMachineParent",
-    "path":"objects/oMachineParent/oMachineParent.yy",
+    "name":"oNormalMachineParent",
+    "path":"objects/oNormalMachineParent/oNormalMachineParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

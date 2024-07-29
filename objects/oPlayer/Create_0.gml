@@ -14,3 +14,4 @@ holdingObject = noone;
 hoveredItem = noone;
 
 clicked_machine = noone;
+object_type = oFoodRecipe;

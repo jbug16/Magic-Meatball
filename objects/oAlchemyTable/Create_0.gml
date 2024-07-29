@@ -4,9 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-vspd = -vspd;
-
-run = sShadowRun;
-idle = sShadowIdle;
-
-object_type = oPotionRecipe;
+item_needed = sDust;
+recipe = sPinkPotion;

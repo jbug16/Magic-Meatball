@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oFridge",
+  "%Name":"oAlchemyTable",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oFridge",
+  "name":"oAlchemyTable",
   "overriddenProperties":[],
   "parent":{
     "name":"Machines",
     "path":"folders/Objects/Machines.yy",
   },
   "parentObjectId":{
-    "name":"oNormalMachineParent",
-    "path":"objects/oNormalMachineParent/oNormalMachineParent.yy",
+    "name":"oShadowMachineParent",
+    "path":"objects/oShadowMachineParent/oShadowMachineParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

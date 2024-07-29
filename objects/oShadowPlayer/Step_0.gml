@@ -181,7 +181,7 @@ if (_customer_near != noone)
 if (mouse_check_button_pressed(mb_right)) 
 {
     // Check if mouse is over any instance of oMachineParent or its children
-    clicked_machine = instance_position(mouse_x, mouse_y, oNormalMachineParent);
+    clicked_machine = instance_position(mouse_x, mouse_y, oShadowMachineParent);
 
     if (clicked_machine != noone)
     {
@@ -189,14 +189,14 @@ if (mouse_check_button_pressed(mb_right))
         if (clicked_machine.item_for_pickup == noone)
         {
             // if player is holding an item
-            if (holdingObject != noone)
+            if (oShadowPlayer.holdingObject != noone)
             {
                 // if player is holding correct item
-                if (holdingObject.sprite_index == clicked_machine.item_needed)
+                if (oShadowPlayer.holdingObject.sprite_index == clicked_machine.item_needed)
                 {
                     // remove item from hand
-                    instance_destroy(holdingObject);
-                    holdingObject = noone;
+                    instance_destroy(oShadowPlayer.holdingObject);
+                    oShadowPlayer.holdingObject = noone;
             
                     // after 5 seconds
                     clicked_machine.alarm[0] = 100;
@@ -208,11 +208,11 @@ if (mouse_check_button_pressed(mb_right))
             clicked_machine.item_for_pickup = noone;
             clicked_machine.is_creating_recipe = false;
         
-            holdingObject = noone;
+            oShadowPlayer.holdingObject = noone;
         
             var inst = instance_create_layer(mouse_x, mouse_y, "Items", object_type);
             inst.sprite_index = clicked_machine.recipe;
-            holdingObject = inst;
+            oShadowPlayer.holdingObject = inst;
         }
     }
 }

@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oFridge",
+  "%Name":"oPotionRecipe",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oFridge",
+  "name":"oPotionRecipe",
   "overriddenProperties":[],
   "parent":{
-    "name":"Machines",
-    "path":"folders/Objects/Machines.yy",
+    "name":"Pickups",
+    "path":"folders/Objects/Pickups.yy",
   },
   "parentObjectId":{
-    "name":"oNormalMachineParent",
-    "path":"objects/oNormalMachineParent/oNormalMachineParent.yy",
+    "name":"oPickupParent",
+    "path":"objects/oPickupParent/oPickupParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sMachine",
-    "path":"sprites/sMachine/sMachine.yy",
+    "name":"sBluePotion",
+    "path":"sprites/sBluePotion/sBluePotion.yy",
   },
   "spriteMaskId":null,
   "visible":true,
