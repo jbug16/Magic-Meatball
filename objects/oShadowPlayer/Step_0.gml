@@ -178,43 +178,50 @@ if (_customer_near != noone)
 
 #region Make items
 
-if (mouse_check_button_pressed(mb_right)) 
-{
-    // Check if mouse is over any instance of oMachineParent or its children
-    clicked_machine = instance_position(mouse_x, mouse_y, oShadowMachineParent);
+// Check if mouse is over any instance of oMachineParent or its children
+clicked_machine = instance_position(mouse_x, mouse_y, oShadowMachineParent);
+var _range = 100;
 
-    if (clicked_machine != noone)
-    {
-		// if no item is available for pick up
-        if (clicked_machine.item_for_pickup == noone)
-        {
-            // if player is holding an item
-            if (oShadowPlayer.holdingObject != noone)
-            {
-                // if player is holding correct item
-                if (oShadowPlayer.holdingObject.sprite_index == clicked_machine.item_needed)
-                {
-                    // remove item from hand
-                    instance_destroy(oShadowPlayer.holdingObject);
-                    oShadowPlayer.holdingObject = noone;
+if (clicked_machine != noone)
+{
+	if (mouse_check_button_pressed(mb_right)) 
+	{
+		var _distance_to_machine = point_distance(x, y, clicked_machine.x, clicked_machine.y);
+		
+		// Check if player is within range
+	    if (_distance_to_machine < _range)
+	    {
+			// if no item is available for pick up
+	        if (clicked_machine.item_for_pickup == noone)
+	        {
+	            // if player is holding an item
+	            if (holdingObject != noone)
+	            {
+	                // if player is holding correct item
+	                if (holdingObject.sprite_index == clicked_machine.item_needed)
+	                {
+	                    // remove item from hand
+	                    instance_destroy(holdingObject);
+	                    holdingObject = noone;
             
-                    // after 5 seconds
-                    clicked_machine.alarm[0] = 100;
-                }
-            }
-        }
-        else
-        {
-            clicked_machine.item_for_pickup = noone;
-            clicked_machine.is_creating_recipe = false;
+	                    // after 5 seconds
+	                    clicked_machine.alarm[0] = 100;
+	                }
+	            }
+	        }
+	        else
+	        {
+	            clicked_machine.item_for_pickup = noone;
+	            clicked_machine.is_creating_recipe = false;
         
-            oShadowPlayer.holdingObject = noone;
+	            holdingObject = noone;
         
-            var inst = instance_create_layer(mouse_x, mouse_y, "Items", object_type);
-            inst.sprite_index = clicked_machine.recipe;
-            oShadowPlayer.holdingObject = inst;
-        }
-    }
+	            var inst = instance_create_layer(mouse_x, mouse_y, "Items", object_type);
+	            inst.sprite_index = clicked_machine.recipe;
+	            holdingObject = inst;
+	        }
+	    }
+	}
 }
 
 #endregion
