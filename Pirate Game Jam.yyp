@@ -103,6 +103,8 @@
     {"id":{"name":"AssignItems","path":"scripts/AssignItems/AssignItems.yy",},},
     {"id":{"name":"OrderSystem","path":"scripts/OrderSystem/OrderSystem.yy",},},
     {"id":{"name":"seconds_to_timestamp","path":"scripts/seconds_to_timestamp/seconds_to_timestamp.yy",},},
+    {"id":{"name":"sndCooking","path":"sounds/sndCooking/sndCooking.yy",},},
+    {"id":{"name":"sndTitle","path":"sounds/sndTitle/sndTitle.yy",},},
     {"id":{"name":"sBluePotion","path":"sprites/sBluePotion/sBluePotion.yy",},},
     {"id":{"name":"sBluePotionRecipe","path":"sprites/sBluePotionRecipe/sBluePotionRecipe.yy",},},
     {"id":{"name":"sBox","path":"sprites/sBox/sBox.yy",},},
