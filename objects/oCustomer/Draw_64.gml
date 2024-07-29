@@ -33,5 +33,6 @@ if (customer_order != noone)
 		break;
 	}
 	
-	draw_sprite(_sprite, 0, self.x - 16, self.y - 96);
+	draw_sprite(sBubble, 0, self.x - 2, self.y - 96);
+	draw_sprite(_sprite, 0, self.x - 2, self.y - 96);
 }

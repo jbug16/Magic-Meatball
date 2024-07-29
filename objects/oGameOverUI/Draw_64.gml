@@ -28,7 +28,7 @@ if (paused == true)
 		
 		draw_rectangle_color(_view_midw - _box_size, _view_midh - _box_size, _view_midw + _box_size, _view_midh + _box_size, _col, _col, _col, _col, false);
 		
-		draw_set_font(-1);
+		draw_set_font(fntUI);
 		draw_set_color(c_white);
 		
 		draw_text(_view_midw - 190, _view_midh - 190, "You completed all the orders!");

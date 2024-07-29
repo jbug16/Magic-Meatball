@@ -1,1 +1,1 @@
-draw_text(20, 20, seconds_to_timestamp(timer / 60));
+draw_text(584, -6, seconds_to_timestamp(timer / 60));

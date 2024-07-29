@@ -74,9 +74,7 @@ else
 #region Pickup Item
 
 var _item_near = instance_position(mouse_x, mouse_y, oPickupParent);
-
 var _max_range = 256;
-
 
 // Check if player clicked on an object
 if (mouse_check_button_pressed(mb_left)) 
@@ -177,3 +175,40 @@ if (_customer_near != noone)
 }
 
 #endregion
+
+if (mouse_check_button_pressed(mb_right)) 
+{
+	if (collision_point(mouse_x, mouse_y, oFridge, true, false))
+	{
+		// if no item is available for pick up
+		if (oFridge.item_for_pickup == noone)
+		{
+			// if player is holding an item
+			if (holdingObject != noone)
+			{
+				// if player is holding correct item
+				if (holdingObject.sprite_index == oFridge.item_needed)
+				{
+					// remove item from hand
+					instance_destroy(holdingObject);
+					holdingObject = noone;
+		
+					// after 5 seconds
+					oFridge.alarm[0] = 100;
+				}
+			}
+		}
+		else
+		{
+			s("player is holding salad");
+			oFridge.item_for_pickup = noone;
+			oFridge.is_creating_recipe = false;
+	
+			holdingObject = noone;
+	
+			var inst = instance_create_layer(x, y, "Items", oFoodRecipe);
+			inst.sprite_index = oFridge.recipe;
+			holdingObject = inst;
+		}
+	}
+}
