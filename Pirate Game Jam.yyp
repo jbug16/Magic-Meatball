@@ -78,6 +78,7 @@
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
     {"id":{"name":"oGameOverUI","path":"objects/oGameOverUI/oGameOverUI.yy",},},
     {"id":{"name":"oGreenFireplace","path":"objects/oGreenFireplace/oGreenFireplace.yy",},},
+    {"id":{"name":"oItemSpawner","path":"objects/oItemSpawner/oItemSpawner.yy",},},
     {"id":{"name":"oLevelOne","path":"objects/oLevelOne/oLevelOne.yy",},},
     {"id":{"name":"oLevelThree","path":"objects/oLevelThree/oLevelThree.yy",},},
     {"id":{"name":"oLevelTutorial","path":"objects/oLevelTutorial/oLevelTutorial.yy",},},

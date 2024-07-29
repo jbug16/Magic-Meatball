@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oFoodItem",
+  "%Name":"oItemSpawner",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oFoodItem",
+  "name":"oItemSpawner",
   "overriddenProperties":[],
   "parent":{
     "name":"Pickups",
     "path":"folders/Objects/Pickups.yy",
   },
-  "parentObjectId":{
-    "name":"oPickupParent",
-    "path":"objects/oPickupParent/oPickupParent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,19 +26,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"food","filters":[],"listItems":[],"multiselect":false,"name":"food","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sCoffeeBean",
-    "path":"sprites/sCoffeeBean/sCoffeeBean.yy",
-  },
-  "spriteMaskId":{
-    "name":"sPickupCollision",
-    "path":"sprites/sPickupCollision/sPickupCollision.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }

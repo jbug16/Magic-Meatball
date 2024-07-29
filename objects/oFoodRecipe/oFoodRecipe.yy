@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPasta",
-    "path":"sprites/sPasta/sPasta.yy",
+    "name":"sCoffee",
+    "path":"sprites/sCoffee/sCoffee.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBluePotion",
-    "path":"sprites/sBluePotion/sBluePotion.yy",
+    "name":"sShell",
+    "path":"sprites/sShell/sShell.yy",
   },
   "spriteMaskId":{
     "name":"sPickupCollision",
