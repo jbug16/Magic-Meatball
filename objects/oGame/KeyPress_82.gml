@@ -1,3 +1,5 @@
+game_restart();
+/*
 var lay_id = layer_get_id("Recipes");
 if (layer_get_visible(lay_id))
 {

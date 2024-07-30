@@ -194,6 +194,8 @@ if (_customer_near != noone)
 				completeOrder(_customer_near);
 				checkIfLastOrder();
 				
+				oShadowCustomer.type_of_order = randomPotionOrder();
+				
 				audio_play_sound(sndCorrectOrder, 0.2, false);
 			}
 			else

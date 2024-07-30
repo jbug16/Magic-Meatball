@@ -1,7 +1,7 @@
 randomize();
 
 // Macros
-#macro s show_debug_message
+#macro sBack show_debug_message
 
 // Globals
 global.orders_completed = 0;
