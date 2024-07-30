@@ -153,6 +153,7 @@
     {"id":{"name":"sPlayerCollision","path":"sprites/sPlayerCollision/sPlayerCollision.yy",},},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},
     {"id":{"name":"sPlayerRun","path":"sprites/sPlayerRun/sPlayerRun.yy",},},
+    {"id":{"name":"sPlayerShadow","path":"sprites/sPlayerShadow/sPlayerShadow.yy",},},
     {"id":{"name":"sRedPotion","path":"sprites/sRedPotion/sRedPotion.yy",},},
     {"id":{"name":"sRedPotionRecipe","path":"sprites/sRedPotionRecipe/sRedPotionRecipe.yy",},},
     {"id":{"name":"sRoomBuilder","path":"sprites/sRoomBuilder/sRoomBuilder.yy",},},
