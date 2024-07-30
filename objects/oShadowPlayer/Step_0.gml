@@ -112,6 +112,8 @@ if (mouse_check_button_pressed(mb_left))
 			if (_distance_to_item < _max_range) 
 			{
 				holdingObject = _item_near.id;
+				
+				audio_play_sound(sndItemPickup, 0.2, false);
 			}
 		}
 	} 
@@ -125,6 +127,8 @@ if (mouse_check_button_pressed(mb_left))
 		holdingObject.dy = (mouse_y - holdingObject.y)/25;
 		
 		holdingObject = noone;
+		
+		audio_play_sound(sndThrow, 0.2, false);
 	}
 }
 
@@ -189,6 +193,12 @@ if (_customer_near != noone)
 			{
 				completeOrder(_customer_near);
 				checkIfLastOrder();
+				
+				audio_play_sound(sndCorrectOrder, 0.2, false);
+			}
+			else
+			{
+				audio_play_sound(sndWrongOrder, 0.2, false);
 			}
 		}
 	}
@@ -226,7 +236,13 @@ if (clicked_machine != noone)
             
 	                    // after 5 seconds
 	                    clicked_machine.alarm[0] = 100;
+						
+						audio_play_sound(sndCorrectMachine, 0.2, false);
 	                }
+					else
+					{
+						audio_play_sound(sndWrongMachine, 0.2, false);
+					}
 	            }
 	        }
 	        else
@@ -239,6 +255,8 @@ if (clicked_machine != noone)
 	            var inst = instance_create_layer(mouse_x, mouse_y, "Items", object_type);
 	            inst.sprite_index = clicked_machine.recipe;
 	            holdingObject = inst;
+				
+				audio_play_sound(sndItemPickup, 0.2, false);
 	        }
 	    }
 	}

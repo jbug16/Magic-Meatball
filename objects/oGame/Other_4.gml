@@ -6,6 +6,6 @@ switch (room)
 	
 	case rmMain:
 		audio_stop_all();
-		audio_play_sound(sndCooking, 1, true);
+		if (!audio_is_playing(sndCooking)) audio_play_sound(sndCooking, 1, true);
 	break;
 }

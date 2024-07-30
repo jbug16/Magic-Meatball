@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndCooking",
+  "%Name":"sndItemPickup",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":18.83425,
-  "name":"sndCooking",
+  "duration":0.57465,
+  "name":"sndItemPickup",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndCooking.mp3",
+  "soundFile":"sndItemPickup.mp3",
   "type":0,
-  "volume":0.5,
+  "volume":0.25,
 }

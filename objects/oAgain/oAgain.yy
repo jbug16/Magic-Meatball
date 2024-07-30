@@ -7,7 +7,7 @@
   "managed":true,
   "name":"oAgain",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oMenuButtonParent","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"propertyId":{"name":"Button_Text","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Try Again",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oMenuButtonParent","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"propertyId":{"name":"Button_Text","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Play Again",},
   ],
   "parent":{
     "name":"Main Menu Buttons",
