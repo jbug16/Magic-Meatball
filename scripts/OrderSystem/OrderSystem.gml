@@ -130,7 +130,7 @@ function completeOrder(_customer)
 
 function checkIfLastOrder()
 {
-	if (global.orders_completed == 2)
+	if (global.orders_completed == 10)
 	{
 		instance_create_depth(x, y, -999, oGameOverUI);
 	}
