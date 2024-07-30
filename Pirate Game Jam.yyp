@@ -58,6 +58,7 @@
   "resources":[
     {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
     {"id":{"name":"fntUI","path":"fonts/fntUI/fntUI.yy",},},
+    {"id":{"name":"oAgain","path":"objects/oAgain/oAgain.yy",},},
     {"id":{"name":"oAlchemyTable","path":"objects/oAlchemyTable/oAlchemyTable.yy",},},
     {"id":{"name":"oButtonCredits","path":"objects/oButtonCredits/oButtonCredits.yy",},},
     {"id":{"name":"oButtonPlay","path":"objects/oButtonPlay/oButtonPlay.yy",},},
@@ -85,7 +86,6 @@
     {"id":{"name":"oLevelTwo","path":"objects/oLevelTwo/oLevelTwo.yy",},},
     {"id":{"name":"oMenuButtonParent","path":"objects/oMenuButtonParent/oMenuButtonParent.yy",},},
     {"id":{"name":"oMirror","path":"objects/oMirror/oMirror.yy",},},
-    {"id":{"name":"oNext","path":"objects/oNext/oNext.yy",},},
     {"id":{"name":"oNormalMachineParent","path":"objects/oNormalMachineParent/oNormalMachineParent.yy",},},
     {"id":{"name":"oOrderUI","path":"objects/oOrderUI/oOrderUI.yy",},},
     {"id":{"name":"oPickupParent","path":"objects/oPickupParent/oPickupParent.yy",},},

@@ -40,6 +40,6 @@ if (paused == true)
 		draw_text(_view_midw , _view_midh - 128, "Current Time: " + _current_time_string);
 		draw_text(_view_midw, _view_midh, "BEST Time: " + _highscore_string);
 		
-		instance_create_depth(_view_midw, _view_midh + 256, -9999, oNext);
+		instance_create_depth(_view_midw, _view_midh + 256, -9999, oAgain);
     }
 }
