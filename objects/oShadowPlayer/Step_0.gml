@@ -94,7 +94,7 @@ else
 #region Pickup Item
 
 var _item_near = instance_position(mouse_x, mouse_y, oPickupParent);
-var _max_range = 256;
+var _max_range = 128;
 
 // Check if player clicked on an object
 if (mouse_check_button_pressed(mb_left)) 
