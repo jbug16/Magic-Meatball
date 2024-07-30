@@ -1,1 +1,1 @@
-if (room == rmCredits) room_goto(rmMenu);
+if (room == rmCredits) { room_goto(rmMenu); audio_play_sound(sndButton, 1, false, 0.5); }

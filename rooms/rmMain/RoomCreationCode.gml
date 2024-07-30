@@ -1,0 +1,1 @@
+jukebox_play_song(sndCooking, 4000, 4000, true);

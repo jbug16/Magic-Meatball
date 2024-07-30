@@ -18,4 +18,6 @@ for (var i = 0; i < array_length(list_of_orders); i++)
 
 // draw orders completed
 draw_set_font(fntUI);
+draw_set_halign(-1);
+draw_set_valign(-1);
 draw_text(936, -6, string(global.orders_completed) + "/15");
