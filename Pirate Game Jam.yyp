@@ -184,6 +184,7 @@
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
     {"id":{"name":"sSmallHouseItems","path":"sprites/sSmallHouseItems/sSmallHouseItems.yy",},},
     {"id":{"name":"sTitle","path":"sprites/sTitle/sTitle.yy",},},
+    {"id":{"name":"sTitle2","path":"sprites/sTitle2/sTitle2.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
     {"id":{"name":"tsDecoration","path":"tilesets/tsDecoration/tsDecoration.yy",},},
     {"id":{"name":"tsFloors","path":"tilesets/tsFloors/tsFloors.yy",},},
