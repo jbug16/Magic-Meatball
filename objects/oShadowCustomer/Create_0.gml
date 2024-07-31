@@ -3,5 +3,3 @@
 
 // Inherit the parent event
 event_inherited();
-
-type_of_order = randomPotionOrder();

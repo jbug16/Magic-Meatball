@@ -15,7 +15,7 @@ if (timer <= 0 and spawns < spawnMax)
 	instance_create_layer(_x, _y, "Items", _random_item);
 	
 	// reset timer
-	timer = time;
+	timer = irandom_range(100, 240);
 	
 	// increment spawns
 	spawns++;

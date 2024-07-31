@@ -5,5 +5,5 @@ if (alarm[0] == 0 and ordering == false)
 	ordering = true;
 	
 	// resets timer
-	alarm[0] = 60;
+	alarm[0] = irandom_range(60, 300);
 }
